@@ -33,13 +33,15 @@ Ensure you have the following installed on your system:
 * MySQL Server
 * MySQL JDBC Driver `.jar` file
 
+
 ### Installation
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/your-username/hospital-management-system.git](https://github.com/your-username/hospital-management-system.git)
+    git clone [https://github.com/haneef111/hospital-management-system.git](https://github.com/haneef111/hospital-management-system.git)
     cd hospital-management-system
     ```
+
 
 2.  **Database Setup**
     * In your MySQL client, create a new database.
@@ -49,6 +51,7 @@ Ensure you have the following installed on your system:
         ```
     * Run the following script to create the required tables.
         ```sql
+        
         -- Create Patients Table
         CREATE TABLE patients (
             id INT PRIMARY KEY AUTO_INCREMENT,
@@ -57,12 +60,14 @@ Ensure you have the following installed on your system:
             gender VARCHAR(50)
         );
 
+
         -- Create Doctors Table
         CREATE TABLE doctors (
             id INT PRIMARY KEY AUTO_INCREMENT,
             name VARCHAR(255) NOT NULL,
             specialization VARCHAR(255)
         );
+
 
         -- Create Appointments Table
         CREATE TABLE appointments (
@@ -75,8 +80,11 @@ Ensure you have the following installed on your system:
         );
         ```
 
+
 3.  **Configure JDBC Connection**
+   
     * Add the **MySQL JDBC Driver `.jar`** file to your project's classpath.
+      
     * Open the Java source code and update the database connection variables with your credentials.
         ```java
         private static final String URL = "jdbc:mysql://localhost:3306/hospital";
@@ -84,11 +92,6 @@ Ensure you have the following installed on your system:
         private static final String PASSWORD = "your_mysql_password";
         ```
 
-4.  **Compile and Run**
+5.  **Compile and Run**
     * Compile and run the main application file, `HospitalManagementSystem.java`, from your IDE or the command line.
 
----
-
-## 💻 Usage
-
-Once the application is running, you will be greeted with a menu in your console. Enter the number corresponding to the action you wish to perform.
